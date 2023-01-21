@@ -1,0 +1,23 @@
+0	1	2	3	4	5	6	7
+0	inf	1	1	2	2	2	3 //limits.h
+0		2	3	2	3	3	3
+{2, 3
+
+
+summ * number_of_notes
+
+summ/value
+
+for(i=0; i<n; i+=value)
+
+#define SIZE 1024
+int dp[SIZE][SIZE];
+
+int main()
+{
+
+
+dp[i][0] = 0;
+dp[0][j] = 1;
+
+dp[i][j] = 2*dp[i-1][j] + 3*dp[i-1][j]

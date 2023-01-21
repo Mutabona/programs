@@ -1,0 +1,19 @@
+if(isdigit(symbol) || (symbol =='-'))
+{
+	ungetc(symbol, stdin);
+	scanf("%d", ...)
+
+scanf("%m[^-0-9]"
+	
+
+strlen(stroka)// O(N)
+
+
+for(i=0, length = strlen(length); i<length; i++)//O(N)
+
+
+		Зажигательным
+	Трассирующим
+Бронебойным
+
+ТБЗ

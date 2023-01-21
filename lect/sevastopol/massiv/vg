@@ -1,0 +1,21 @@
+
+====== Test #6 =======
+--- Input: size 5 ---
+BOMB
+
+--- Output: size 2 ---
+NO
+--- Stderr: size 458 ---
+==6473== Conditional jump or move depends on uninitialised value(s)
+==6473==    at 0x400581: main (003492.c:12)
+==6473==  Uninitialised value was created by a stack allocation
+==6473==    at 0x400552: main (003492.c:6)
+==6473== 
+==6473== Conditional jump or move depends on uninitialised value(s)
+==6473==    at 0x40058A: main (003492.c:12)
+==6473==  Uninitialised value was created by a stack allocation
+==6473==    at 0x400552: main (003492.c:6)
+==6473== 
+
+--- Resource usage ---
+program: { utime=378, stime=87, ptime=465, rtime=482, maxvsz=190689280, maxrss=139452416, nvcsw=2, nivcsw=8 }

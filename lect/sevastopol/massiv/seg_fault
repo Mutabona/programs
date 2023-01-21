@@ -1,0 +1,28 @@
+--- Stderr: size 945 ---
+==7137== Invalid write of size 1
+==7137==    at 0x51E2822: _IO_vfscanf (in /usr/lib64/libc-2.26.so)
+==7137==    by 0x51EE857: __isoc99_scanf (in /usr/lib64/libc-2.26.so)
+==7137==    by 0x400595: main (003501.c:11)
+==7137==  Address 0x1fff001000 is not stack'd, malloc'd or (recently) free'd
+==7137== 
+==7137== 
+==7137== Process terminating with default action of signal 11 (SIGSEGV)
+==7137==  Access not within mapped region at address 0x1FFF001000
+==7137==    at 0x51E2822: _IO_vfscanf (in /usr/lib64/libc-2.26.so)
+==7137==    by 0x51EE857: __isoc99_scanf (in /usr/lib64/libc-2.26.so)
+==7137==    by 0x400595: main (003501.c:11)
+==7137==  If you believe this happened as a result of a stack
+==7137==  overflow in your program's main thread (unlikely but
+==7137==  possible), you can try to increase the size of the
+==7137==  main thread stack using the --main-stacksize= flag.
+==7137==  The main thread stack size used in this run was 8388608.
+
+--- Resource usage ---
+program: { utime=355, stime=91, ptime=446, rtime=509, maxvsz=190689280, maxrss=139153408, nvcsw=3, nivcsw=4 }
+
+
+        char good[100];
+        char bad[100];
+        int retg = 1, retb = 1;
+        do {
+                retg = scanf("%[a-z]", good);

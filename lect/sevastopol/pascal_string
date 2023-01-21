@@ -1,0 +1,10 @@
+a-zA-Z0-9+-*/=   62
+160  lat
+70 rus
+160 * lat = 70 * rus /Диофантово уравнение
+lat 7 
+rus 16
+
+
+char stroka[SIZE];
+

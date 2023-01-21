@@ -1,0 +1,5 @@
+10101001
+
+seq(N, 0) = seq(N-1, 1) + seq(N-1, 0)
+seq(N, 1) = seq(N-1, 0)
+seq(N, 0) = seq(N-2, 0) + seq(N-1, 0)

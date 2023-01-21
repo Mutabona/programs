@@ -1,0 +1,10 @@
+8 bit/symbol
+char stroka[SIZE+1];
+stroka[0] = SIZE;
+[Sarah Connor diary. Terminator]
+stroka[SIZE] = 0;
+
+length(stroka) = stroka[0];
+for(i=0; stroka[i]; i++)
+	
+

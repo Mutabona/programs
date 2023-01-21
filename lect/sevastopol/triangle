@@ -1,0 +1,18 @@
+   3	     3
+  7 4	   10  7
+ 2 4 6   12  14  13
+8 5 9 3 20 19  23   16
+number	total
+
+3
+74
+246
+8593
+
+for(...; ... ; i+=2)
+
+sum_left  = total[i][j]+number[i+1][j-1];
+sum_right = total[i][j]+number[i+1][j+1];
+if(total[i+1][j-1] < sum_left) total[i+1][j-1] = sum_left;
+
+
