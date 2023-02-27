@@ -55,5 +55,10 @@ public class Main {
             System.out.print("\n");
         }
         
+
+        for (int i = 0; i < n; i++) {
+            BigInteger num = s.nextBigInteger();
+            sum = sum.add(num);
+        }
     }
 }
