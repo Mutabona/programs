@@ -3,12 +3,20 @@ import java.util.Scanner;
 
 public class regex {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
         Pattern pattern = Pattern.compile("\\d{2}");
+        int time = getNumber(pattern) + getNumber(pattern);
+        System.out.printf("%02d:%02d", (time/60)%24, (time%60));
+    }
+
+    public static int getNumber(Pattern pattern) {
+        Scanner scn = new Scanner(System.in);
         String text = scn.next();
         Matcher matcher = pattern.matcher(text);
         matcher.find();
-        System.out.print(text.substring(matcher.start(), matcher.end()));
+        int minutes = (Integer.parseInt(text.substring(matcher.start(), matcher.end())))*60;
+        matcher.find();
+        minutes += Integer.parseInt(text.substring(matcher.start(), matcher.end()));
+        return minutes;
     }
 }
 
