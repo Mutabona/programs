@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/kodo2/programs/labo",
-      "program": "c:/Users/kodo2/programs/labo/build/Debug/outDebug",
+      "cwd": "c:/Users/kodo2/programs/labs de l`institute",
+      "program": "c:/Users/kodo2/programs/labs de l`institute/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
