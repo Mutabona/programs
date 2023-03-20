@@ -37,3 +37,6 @@ public class regex {
 //Matcher matcher = p.matcher(line);
 //if (matcher.find()) {
 //System.out.println(line.substring(matcher.start(), matcher.end()));
+
+//Scanner scan = new Scanner(new File("myfile.txt")); 
+//Scanner scan = new Scanner(new FileInputStream("myfile.txt")); 
