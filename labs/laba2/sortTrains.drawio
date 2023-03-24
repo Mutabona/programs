@@ -1,0 +1,160 @@
+<mxfile host="app.diagrams.net" modified="2023-03-24T19:13:18.888Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="K1M4GR5Hqj0dzE75qFpH" version="21.1.1" type="device">
+  <diagram name="Страница 1" id="v9U56DwP9Y4tuRkisYDo">
+    <mxGraphModel dx="792" dy="1138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="72az1RrLqNMfEdOYY7MC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-1" target="72az1RrLqNMfEdOYY7MC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-1" value="Начало&lt;br&gt;sortTrains" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-2" target="72az1RrLqNMfEdOYY7MC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-2" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;numberOfINdexes = ftell(file)/sizeof(struct TRAIN)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="100" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-5" target="72az1RrLqNMfEdOYY7MC-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-5" target="72az1RrLqNMfEdOYY7MC-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="170" />
+              <mxPoint x="750" y="1060" />
+              <mxPoint x="414" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-5" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;i = 0; i &amp;lt; numberOfINdexes; i++&lt;/span&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="309" y="150" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-8" target="72az1RrLqNMfEdOYY7MC-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-8" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fseek(file, sizeof(struct TRAIN)*i, 0)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="297" y="210" width="234" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-10" target="72az1RrLqNMfEdOYY7MC-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-10" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fread(&amp;amp;tempTrain1, sizeof(struct TRAIN), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="290" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-12" target="72az1RrLqNMfEdOYY7MC-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-12" value="iMin = i" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="340" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-14" target="72az1RrLqNMfEdOYY7MC-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-14" target="72az1RrLqNMfEdOYY7MC-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="405" />
+              <mxPoint x="660" y="620" />
+              <mxPoint x="414" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-14" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;j = i+1; j &amp;lt; numberOfINdexes; j++&lt;/span&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="304" y="380" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-17" target="72az1RrLqNMfEdOYY7MC-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-17" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fread(&amp;amp;tempTrain2, sizeof(struct TRAIN), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="259" y="450" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-24" value="TRUE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-19" target="72az1RrLqNMfEdOYY7MC-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="540" />
+              <mxPoint x="280" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="414" y="610" />
+              <mxPoint x="280" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-19" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;tempTrain2.number &amp;lt; tempTrain1.number&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="304" y="500" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-21" target="72az1RrLqNMfEdOYY7MC-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="610" />
+              <mxPoint x="160" y="610" />
+              <mxPoint x="160" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-21" value="iMin = j" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="570" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-26" target="72az1RrLqNMfEdOYY7MC-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-26" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fseek(file, sizeof(struct TRAIN)*iMin, 0)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="289" y="650" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-29" target="72az1RrLqNMfEdOYY7MC-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-29" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fread(&amp;amp;tempTrain2, sizeof(struct TRAIN), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="261" y="700" width="306" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-31" target="72az1RrLqNMfEdOYY7MC-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-31" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;tempTrain2.index += tempTrain1.index&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; tempTrain1.index = tempTrain2.index - tempTrain1.index&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; tempTrain2.index -= tempTrain1.index&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="212" y="750" width="404" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-36" target="72az1RrLqNMfEdOYY7MC-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-36" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fseek(file, sizeof(struct TRAIN)*iMin, 0)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="289" y="830" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-38" target="72az1RrLqNMfEdOYY7MC-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-38" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fwrite(&amp;amp;tempTrain1, sizeof(struct TRAIN), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="259" y="880" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-40" target="72az1RrLqNMfEdOYY7MC-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-40" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fseek(file, sizeof(struct TRAIN)*i, 0)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="301" y="930" width="226" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="72az1RrLqNMfEdOYY7MC-42" target="72az1RrLqNMfEdOYY7MC-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="414" y="1050" />
+              <mxPoint x="110" y="1050" />
+              <mxPoint x="110" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-42" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fwrite(&amp;amp;tempTrain2, sizeof(struct TRAIN), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="261" y="980" width="306" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="72az1RrLqNMfEdOYY7MC-45" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="1080" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
