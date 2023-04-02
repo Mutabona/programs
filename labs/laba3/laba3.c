@@ -124,13 +124,13 @@ void printAllTrains(struct trainList* trainList) {
         return;
     printTrain(trainList->train);
     printAllTrains(trainList->next);
+    return;
 }
 
 struct trainList* setList() {
     FILE* file = fopen("trainData.dat", "rb");    
     if (!file)
         return NULL;
-    rewind(file);
     fseek(file, 0, 2);
     int trainCount = ftell(file)/sizeof(struct trainList);
     struct trainList* readTrain = NULL;
@@ -211,4 +211,5 @@ void variantFunction(struct trainList* trainList) {
     newTrain->next = (struct trainList*)malloc(sizeof(struct trainList));
     newTrain->next->train=setTrain();
     newTrain->next->next=train1;
+    return;
 }

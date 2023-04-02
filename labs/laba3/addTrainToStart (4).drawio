@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2023-04-02T16:11:47.352Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62" etag="-_hdMEYJXoO0pW__SG7i" version="21.1.2" type="device">
+  <diagram name="Страница 1" id="hpeaLOb4ki1D0EqD98By">
+    <mxGraphModel dx="792" dy="1138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="X0vXvUi98DkpnafCrL5I-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X0vXvUi98DkpnafCrL5I-1" target="X0vXvUi98DkpnafCrL5I-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-1" value="Начало&lt;br&gt;addTrainToStart" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="X0vXvUi98DkpnafCrL5I-2" target="X0vXvUi98DkpnafCrL5I-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-2" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;newTrain = (struct trainList*)malloc(sizeof(struct trainList))&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="234" y="130" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="X0vXvUi98DkpnafCrL5I-4" target="X0vXvUi98DkpnafCrL5I-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-4" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;newTrain-&amp;gt;train = setTrain()&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="324" y="210" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="X0vXvUi98DkpnafCrL5I-6" target="X0vXvUi98DkpnafCrL5I-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-6" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;newTrain-&amp;gt;next = trainList&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="329" y="290" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0vXvUi98DkpnafCrL5I-8" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="370" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
