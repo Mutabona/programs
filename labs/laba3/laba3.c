@@ -44,6 +44,7 @@ int main() {
         printf("%s\n", "5 - Make list");
         printf("%s\n", "6 - Variant function");
         printf("%s\n", "7 - Exit");
+        printf("%s\n", "8 - Save list");
         scanf("%d", &choice);
         switch (choice) {
             case 1:
@@ -65,9 +66,12 @@ int main() {
                 variantFunction(trainList);
                 break;
             case 7:
-                saveList(trainList);
+                
                 freeList(trainList);
                 isActive = 0;
+                break;
+            case 8:
+                saveList(trainList);
                 break;
         }
     }
@@ -149,6 +153,7 @@ struct trainList* setList() {
         }
     }
     fclose(file);
+    printf("%s\n", "Data loaded");
     return trainList;
 }
 
@@ -163,6 +168,7 @@ void saveTrain(struct trainList* trainList, FILE* file) {
 void saveList(struct trainList* trainList) {
     FILE* file = fopen("trainData.dat", "wb");
     saveTrain(trainList, file);
+    printf("%s\n", "Data saved");
     fclose(file);
 }
 

@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame window = new JFrame("FirstProgram");
+        JFrame window = new JFrame("Vitaliy loh");
         window.setBounds(5, 5, 500, 500);
         window.setLayout(null);
         JFileChooser fileChooser = new JFileChooser();
@@ -16,6 +16,8 @@ public class Main {
         window.add(secondField);
 
         window.setVisible(true);
+
+        fileChooser.showOpenDialog(secondField);
 
 
     }
