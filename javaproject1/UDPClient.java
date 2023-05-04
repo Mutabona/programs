@@ -9,9 +9,6 @@ public class UDPClient {
 		System.out.print("Host: ");
 		String host = scn.nextLine();
 
-		
-		
-
 		// args give message contents and destination hostname
         while (true) {
             System.out.print("Message: ");
