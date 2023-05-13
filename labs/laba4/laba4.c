@@ -22,7 +22,7 @@ struct Node {
 struct TRAIN setTrain();
 struct time setTime();
 struct Node* addTrain(struct Node* Node);
-struct Node* addNode(struct Node* Node, struct TRAIN train);
+struct Node* addNode(struct Node* Node, struct Node* newNode);
 void printTrain (struct TRAIN train);
 void printAllTrains(struct Node* train);
 void printTree(struct Node* node, int otstup);
@@ -30,6 +30,10 @@ void saveTrain(struct Node* train, FILE* file);
 void saveTree(struct Node* train);
 void freeTree(struct Node* train);
 struct Node* makeTree(struct Node* Node);
+struct Node* deleteNode(struct Node* node, int number);
+struct Node* loadData(struct Node* node);
+struct Node* loadTree(struct Node* Node, FILE* file);
+struct Node* changeNumbers (struct Node* node, int number);
 
 int main() {
     struct Node* Node = NULL;
@@ -40,26 +44,52 @@ int main() {
         printf("%s\n", "2 - Print struct tree");
         printf("%s\n", "3 - Print all trains");
         printf("%s\n", "4 - Make tree");
-        printf("%s\n", "8 - saveTree");
+        printf("%s\n", "5 - Delete train");
+        printf("%s\n", "6 - Change numbers under");
+        printf("%s\n", "8 - Load data");
+        printf("%s\n", "9 - Save data");
+        printf("%s\n", "10 - Free memory and exit");
         scanf("%d", &choice);
         switch (choice) {
             case 1:
                 Node = addTrain(Node);
                 break;
             case 2:
-                printTree(Node);
+                printTree(Node, 0);
                 break;
             case 3:
                 printAllTrains(Node);
                 break;
             case 4:
                 Node = makeTree(Node);
+                break;
+            case 5:
+                int number = 0;
+                printf("Train number: "); scanf("%d", &number);
+                Node = deleteNode(Node, number);
+                break;
+            case 6:
+                int number1 = 0;
+                printf("Train number: "); scanf("%d", &number1);
+                Node = changeNumbers(Node, number1);
+                break;
+            case 7:
+                char letter = ' ';
+                printf("Letter: "); scanf("%c", &letter);
+                Node = changeNumbers(Node, number);
+                break;
             case 8:
+                Node = loadData(Node);
+                break;
+            case 9:
                 saveTree(Node);
+                break;
+            case 10:
+                freeTree(Node);
+                exit(0);
                 break;
         }
     }
-    freeTree(Node);
     return 0;
 }
 
@@ -80,29 +110,38 @@ struct time setTime() {
 }
 
 struct Node* addTrain(struct Node* node) {
-    struct TRAIN train = setTrain();
-    node = addNode(node, train);
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->train = setTrain();
+    newNode->left=NULL;
+    newNode->right=NULL;
+    node = addNode(node, newNode);
     return node;
 }
 
-struct Node* addNode(struct Node* Node, struct TRAIN train) {
-    if (!Node) {
-        Node = (struct Node*)malloc(sizeof(struct Node));
-        Node->train = train;
-        Node->left=NULL;
-        Node->right=NULL;
-    }
-    else if (Node->train.number > train.number){
-        Node->left = addNode(Node->left, train);
-    }
-    else {
-        Node->right = addNode(Node->right, train);
-    }
-    return Node;
+struct Node* addNode(struct Node* node, struct Node* newNode) {
+    if (!node)
+        node = newNode;
+    else if (node->train.number > newNode->train.number)
+        node->left = addNode(node->left, newNode);
+    else
+        node->right = addNode(node->right, newNode);
+    return node;
 }
 
-struct Node* deleteNode(struct Node* node) {
-
+struct Node* deleteNode(struct Node* node, int number) {
+    if (!node)
+        return NULL;
+    if (node->train.number == number) {
+        struct Node* left = node->left;
+        left = addNode(left, node->right);
+        free(node);
+        return left;   
+    }
+    else if (node->train.number < number)
+        node->right = deleteNode(node->right, number);
+    else
+        node->left = deleteNode(node->left, number);
+    return node;
 }
 
 void printTrain (struct TRAIN train) {
@@ -115,21 +154,21 @@ void printTrain (struct TRAIN train) {
 }
 
 void printAllTrains(struct Node* Node) {
-    if (!Node)
+    if (Node == NULL)
         return;
     printAllTrains(Node->left);
     printTrain(Node->train);
-    printAllTrain(Node->right);
+    printAllTrains(Node->right);
     return;
 }
 
 void printTree(struct Node *node, int otstup) {
     if (node) {
         otstup+=3;
-        otobr(node->right, otstup);
+        printTree(node->right, otstup);
         for(int i=0; i < otstup; i++) printf(" ");
         printf("%d\n",node->train.number);
-        otobr(node->left,otstup);
+        printTree(node->left,otstup);
     }
 }
 
@@ -137,16 +176,47 @@ void saveTrain(struct Node* Node, FILE* file) {
     if (!Node)
         return;
     fwrite(Node, sizeof(struct Node), 1, file);
+    printf("Train saved\n");
     saveTrain(Node->left, file);
-    saveeTrain(Node->right, file);
+    saveTrain(Node->right, file);
     return;
 }
 
 void saveTree(struct Node* Node) {
     FILE* file = fopen("trainData.dat", "wb");
+    if (!file)
+        printf("Open file error");
     saveTrain(Node, file);
     printf("%s\n", "Data saved");
     fclose(file);
+}
+
+
+struct Node* loadData(struct Node* node) {
+    freeTree(node);
+    printf("\tOld tree deleted\n");
+    FILE* file = fopen("trainData.dat", "rb");
+    if (!file)
+        printf("Open file error");
+    node = loadTree(node, file);
+    printf("Data loaded\n");
+    fclose(file);
+    return node;
+}
+struct Node* loadTree(struct Node* Node, FILE* file) {
+    if (!feof(file)) {
+        Node = (struct Node*)malloc(sizeof(struct Node));
+        fread(Node, sizeof(struct Node), 1, file);
+        printf("TrainLoaded\n");
+        if (Node->left)
+            Node->left = loadTree(Node->left, file);
+        if (Node->right)
+            Node->right = loadTree(Node->right, file);
+    }
+    else {
+        return NULL;
+    }
+    return Node;
 }
 
 void freeTree(struct Node* Node) {
@@ -170,4 +240,24 @@ struct Node* makeTree(struct Node* Node) {
         scanf("%d", &choice);
     } while (choice);
     return Node;
+}
+
+struct Node* changeNumbers (struct Node* node, int number) {
+    if (!node)
+        return NULL;
+    if (node->train.number < number) {
+        node->train.number = number;
+    }
+    node->left = changeNumbers(node->left, number);
+    node->right = changeNumbers(node->right, number);
+    return node;
+}
+
+void printTrainsByLetter(struct Node* node, char letter) {
+    if (!node)
+        return;
+    if (node->train.from[0] == letter)
+        printTrain(node->train);
+    printTrainsByLetter(node->right, letter);
+    printTrainsByLetter(node->left, letter);
 }
