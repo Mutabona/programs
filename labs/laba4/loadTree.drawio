@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2023-05-14T13:35:10.796Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="aHErrAUOgJNkG77EH2ic" version="21.3.0" type="device">
+  <diagram name="Страница 1" id="Ca9SqrruQgptpJaOhQNW">
+    <mxGraphModel dx="2074" dy="1148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-1" target="ovB3ue_GgidQHdCC-Ubo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-1" value="Начало&lt;br&gt;loadTree" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-2" target="ovB3ue_GgidQHdCC-Ubo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-22" value="FALSE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-2">
+          <mxGeometry x="-0.9143" relative="1" as="geometry">
+            <mxPoint x="410" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="511" y="160" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-2" value="!feof(file)" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-4" target="ovB3ue_GgidQHdCC-Ubo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-4" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Node = (struct Node*)malloc(sizeof(struct Node))&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-6" target="ovB3ue_GgidQHdCC-Ubo-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-6" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;fread(Node, sizeof(struct Node), 1, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-12" value="TRUE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-9" target="ovB3ue_GgidQHdCC-Ubo-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-9" target="ovB3ue_GgidQHdCC-Ubo-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-9" value="Node-&amp;gt;left" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-11" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Node-&amp;gt;left = loadTree(Node-&amp;gt;left, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-13" target="ovB3ue_GgidQHdCC-Ubo-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-13" target="ovB3ue_GgidQHdCC-Ubo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-13" value="Node-&amp;gt;right" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="550" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ovB3ue_GgidQHdCC-Ubo-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-16" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Node-&amp;gt;right = loadTree(Node-&amp;gt;right, file)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ovB3ue_GgidQHdCC-Ubo-18" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="730" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

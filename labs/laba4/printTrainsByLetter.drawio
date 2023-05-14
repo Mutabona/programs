@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2023-05-14T13:56:18.856Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="KEFMcvh8KqGBX8rPFRTf" version="21.3.0" type="device">
+  <diagram name="Страница 1" id="7d_NbHvmLOLSGC3OKA1f">
+    <mxGraphModel dx="2074" dy="1148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7JuTXYyavor00QMW5PVW-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-1" target="7JuTXYyavor00QMW5PVW-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-1" value="Начало&lt;br&gt;printTrainsByLetter" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-2" target="7JuTXYyavor00QMW5PVW-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-15" value="TRUE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-2">
+          <mxGeometry x="-0.824" relative="1" as="geometry">
+            <mxPoint x="414" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="241" y="160" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-2" value="!node" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-4" target="7JuTXYyavor00QMW5PVW-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-4" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;int exist = printTrainsByLetter(node-&amp;gt;right, letter) + printTrainsByLetter(node-&amp;gt;left, letter)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="299" y="230" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-9" value="TRUE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-6" target="7JuTXYyavor00QMW5PVW-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-6" target="7JuTXYyavor00QMW5PVW-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-6" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;node-&amp;gt;train.from[0] == letter&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="374" y="340" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-8" target="7JuTXYyavor00QMW5PVW-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-8" value="&lt;div style=&quot;font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;printTrain(node-&amp;gt;train)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7JuTXYyavor00QMW5PVW-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-10" value="exist++" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7JuTXYyavor00QMW5PVW-12" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="610" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

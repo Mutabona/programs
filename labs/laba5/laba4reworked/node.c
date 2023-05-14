@@ -1,117 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-struct time {
-    int hours;
-    int minutes;
-};
-
-struct TRAIN {
-    char from[20];
-    char to[20];
-    int number;
-    struct time time;
-};
-
-struct Node {
-    struct TRAIN train;
-    struct Node* left;
-    struct Node* right;
-};
-
-struct TRAIN setTrain();
-struct time setTime();
-struct Node* addTrain(struct Node* Node);
-struct Node* addNode(struct Node* Node, struct Node* newNode);
-void printTrain (struct TRAIN train);
-void printAllTrains(struct Node* train);
-void printTree(struct Node* node, int otstup);
-void saveTrain(struct Node* train, FILE* file);
-void saveTree(struct Node* train);
-void freeTree(struct Node* train);
-struct Node* makeTree(struct Node* Node);
-struct Node* deleteNode(struct Node* node, int number);
-struct Node* loadData(struct Node* node);
-struct Node* loadTree(struct Node* Node, FILE* file);
-struct Node* changeNumbers (struct Node* node, int number);
-int printTrainsByLetter(struct Node* node, char letter);
-
-int main() {
-    struct Node* Node = NULL;
-    int isActive = 1;
-    while (isActive) {
-        int choice;
-        printf("%s\n", "1 - Add train");
-        printf("%s\n", "2 - Print struct tree");
-        printf("%s\n", "3 - Print all trains");
-        printf("%s\n", "4 - Make tree");
-        printf("%s\n", "5 - Delete train");
-        printf("%s\n", "6 - Change numbers under");
-        printf("%s\n", "7 - Print trains with letter");
-        printf("%s\n", "8 - Load data");
-        printf("%s\n", "9 - Save data");
-        printf("%s\n", "10 - Free memory and exit");
-        scanf("%d", &choice);
-        switch (choice) {
-            case 1:
-                Node = addTrain(Node);
-                break;
-            case 2:
-                printTree(Node, 0);
-                break;
-            case 3:
-                printAllTrains(Node);
-                break;
-            case 4:
-                Node = makeTree(Node);
-                break;
-            case 5:
-                int number = 0;
-                printf("Train number: "); scanf("%d", &number);
-                Node = deleteNode(Node, number);
-                break;
-            case 6:
-                int number1 = 0;
-                printf("Train number: "); scanf("%d", &number1);
-                Node = changeNumbers(Node, number1);
-                break;
-            case 7:
-                printf("Letter: "); 
-                char letter;
-                scanf("%s", &letter);
-                if (!printTrainsByLetter(Node, letter))
-                    printf("No trains with first letter: %c\n", letter);
-                break;
-            case 8:
-                Node = loadData(Node);
-                break;
-            case 9:
-                saveTree(Node);
-                break;
-            case 10:
-                freeTree(Node);
-                isActive = 0;
-                break;
-        }
-    }
-    return 0;
-}
-
-struct TRAIN setTrain() {
-    struct TRAIN newTrain;
-    printf("From: "); scanf("%s", newTrain.from);
-    printf("To: "); scanf("%s", newTrain.to);
-    printf("Number: "); scanf("%d", &(newTrain.number));
-    newTrain.time = setTime();
-    return newTrain;
-}
-
-struct time setTime() {
-    struct time time;
-    printf("Hours: "); scanf("%d", &time.hours);
-    printf("Minutes: "); scanf("%d", &time.minutes);
-    return time;
-}
+#include "node.h"
 
 struct Node* addTrain(struct Node* node) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -146,15 +33,6 @@ struct Node* deleteNode(struct Node* node, int number) {
     else
         node->left = deleteNode(node->left, number);
     return node;
-}
-
-void printTrain (struct TRAIN train) {
-    printf("From: %s\n", train.from);
-    printf("To: %s\n", train.to);
-    printf("Number: %d\n", train.number);
-    printf("Time: %02d:%02d\n", train.time.hours, train.time.minutes);
-    printf("\n");
-    return;
 }
 
 void printAllTrains(struct Node* Node) {
@@ -203,7 +81,7 @@ struct Node* loadData(struct Node* node) {
     printf("\tOld tree deleted\n");
     FILE* file = fopen("trainData.dat", "rb");
     if (!file) {
-        printf("Open file error");
+        printf("\tOpen file error\n");
         return NULL;
     }
     node = loadTree(node, file);
@@ -269,4 +147,65 @@ int printTrainsByLetter(struct Node* node, char letter) {
         exist++;
     }
     return exist;
+}
+
+int run() {
+    struct Node* Node = NULL;
+    int isActive = 1;
+    while (isActive) {
+        int choice;
+        printf("%s\n", "1 - Add train");
+        printf("%s\n", "2 - Print struct tree");
+        printf("%s\n", "3 - Print all trains");
+        printf("%s\n", "4 - Make tree");
+        printf("%s\n", "5 - Delete train");
+        printf("%s\n", "6 - Change numbers under");
+        printf("%s\n", "7 - Print trains with letter");
+        printf("%s\n", "8 - Load data");
+        printf("%s\n", "9 - Save data");
+        printf("%s\n", "10 - Free memory and exit");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                Node = addTrain(Node);
+                break;
+            case 2:
+                printTree(Node, 0);
+                break;
+            case 3:
+                printAllTrains(Node);
+                break;
+            case 4:
+                Node = makeTree(Node);
+                break;
+            case 5:
+                int number = 0;
+                printf("Train number: "); scanf("%d", &number);
+                Node = deleteNode(Node, number);
+                break;
+            case 6:
+                int number1 = 0;
+                printf("Train number: "); scanf("%d", &number1);
+                Node = changeNumbers(Node, number1);
+                break;
+            case 7:
+                printf("Letter: "); 
+                char letter;
+                scanf("%s", &letter);
+                if (!printTrainsByLetter(Node, letter))
+                    printf("No trains with first letter: %c\n", letter);
+                break;
+            case 8:
+                Node = loadData(Node);
+                break;
+            case 9:
+                saveTree(Node);
+                break;
+            case 10:
+                freeTree(Node);
+                isActive = 0;
+                break;
+        }
+    }
+    return 0;
 }
